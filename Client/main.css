@@ -1,0 +1,12 @@
+img {
+    max-width: 40%;
+    display: inline-block;
+}
+
+.game-list {
+    display: inline-block;
+}
+
+body{
+    text-align: center;
+}
