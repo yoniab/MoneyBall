@@ -19,7 +19,7 @@ class Pick extends React.Component{
                 <div className="hit-the-floor">MONEYBALL</div>
                 {
                     (this.state.page == "GAME")?
-                    (<PickGame onGamePick={this.onGamePick} games={games}/>)//:
+                    (<PickGame onGamePick={this.onGamePick} games={games}/>):
                     (<PickTeam/>)
                 }
             </div>);
