@@ -14,13 +14,28 @@ class PickTeam extends React.Component{
 
     render(){
         return(
-            <center>
+            <div id="Teams">
             <h1>Pick your team!</h1>
-            <div>
-                <button></button>
-                <button></button>
+<div id="menu">
+    <div className="fader">
+        <div className="text">
+            <p>Yay!</p>
+        </div>
+        <a href="http://stackoverflow.com/questions/15732643/jquery-masonry-and-css3/">
+            <img className ="blog img-square" src="img/teamOne.png" alt="" />
+            </a>
+        </div>
+        
+        <div className="fader">
+            <div className="text">
+                <p>Yay!</p>
             </div>
-            </center>
+            <a href="http://stackoverflow.com/questions/15732643/jquery-masonry-and-css3/">
+                <img className ="blog img-square" src="img/teamTwo.png" alt="" />
+                </a>
+            </div>
+                    
+                </div> </div>
         );
     }
 }

@@ -1,7 +1,3 @@
-img {
-    max-width: 40%;
-    display: inline-block;
-}
 
 .game-list {
     display: inline-block;
@@ -10,3 +6,59 @@ img {
 body{
     text-align: center;
 }
+
+    #menu {
+        text-align: center; }
+    
+    
+    .fader {
+        /* Giving equal sizes to each element */
+        width:    10%;
+        height:   10%;
+        
+        /* Positioning elements in lines */
+        display:  inline-block;
+        
+        /* This is necessary for position:absolute to work as desired */
+        position: relative;
+        
+        /* Preventing zoomed images to grow outside their elements */
+        overflow: hidden; 
+        }
+    
+    
+        .fader img {
+            /* Stretching the images to fill whole elements */
+            width:       100%;
+            height:      100%;
+            
+            /* Preventing blank space below the image */
+            line-height: 0;
+    
+            /* A one-second transition was to disturbing for me */
+            -webkit-transition: all 0.3s ease;
+            -moz-transition:    all 0.3s ease;
+            -o-transition:      all 0.3s ease;
+            -ms-transition:     all 0.3s ease;
+            transition:         all 0.3s ease; }
+    
+            .fader img:hover {
+                /* Making images appear bigger and transparent on mouseover */
+                opacity: 0.5;
+                width:   120%;
+                height:  120%; }
+    
+        .fader .text {
+            /* Placing text behind images */
+            z-index: -10;     
+        
+            /* Positioning text top-left conrner in the middle of elements */
+            position: absolute;
+            top:      50%;
+            left:     50%; }
+        
+            .fader .text p {
+                /* Positioning text contents 50% left and top relative
+                   to text container's top left corner */
+                margin-top:  -50%; 
+                margin-left: -50%; }
