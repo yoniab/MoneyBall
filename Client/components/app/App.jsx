@@ -11,10 +11,7 @@ class App extends React.Component {
 
     render(){
         return (
-            <Router>
-                <Route path="Outcome" component={Outcome}/>
-                <Route path="Pick" component={Pick}/>
-            </Router>
+            <Pick/>
         );
     }
 }

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import PickGame from './pickGame/PickGame.jsx'
-import PickTeam from './pickTeam/PickTeam.jsx'
+//import PickTeam from './pickTeam/PickTeam.jsx'
 class Pick extends React.Component{
 
     constructor(props){
@@ -15,9 +15,9 @@ class Pick extends React.Component{
             <div>
                 <img src="image"/>
                 {
-                    (this.state.page == "GAME")?
-                    (<PickGame/>):
-                    (<PickTeam/>)
+                    //(this.state.page == "GAME")?
+                    (<PickGame/>)//:
+                    //(<PickTeam/>)
                 }
             </div>);
     }
