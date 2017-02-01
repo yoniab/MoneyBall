@@ -1,6 +1,6 @@
 import React from 'react';
-import PickGame from './pickGame/PickGame'
-import PickTeam from './pickTeam/PickTeam'
+import PickGame from './pickGame/PickGame.jsx'
+import PickTeam from './pickTeam/PickTeam.jsx'
 class Pick extends React.Component{
 
     constructor(props){
