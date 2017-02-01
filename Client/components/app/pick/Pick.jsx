@@ -13,7 +13,7 @@ class Pick extends React.Component{
     render(){
         return (
             <div>
-                <img src="image"/>
+                <div className="hit-the-floor">MONEYBALL</div>
                 {
                     //(this.state.page == "GAME")?
                     //(<PickGame/>)//:

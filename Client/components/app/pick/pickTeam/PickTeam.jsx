@@ -15,21 +15,15 @@ class PickTeam extends React.Component{
     render(){
         return(
             <div id="Teams">
-            <h1>Pick your team!</h1>
+            <div className="coolText"><h1>𝐏𝐈𝐂𝐊 𝐘𝐎𝐔𝐑 𝐓𝐄𝐀𝐌</h1></div>
 <div id="menu">
     <div className="fader">
-        <div className="text">
-            <p>Yay!</p>
-        </div>
         <a href="http://stackoverflow.com/questions/15732643/jquery-masonry-and-css3/">
             <img className ="blog img-square" src="img/teamOne.png" alt="" />
             </a>
         </div>
         
         <div className="fader">
-            <div className="text">
-                <p>Yay!</p>
-            </div>
             <a href="http://stackoverflow.com/questions/15732643/jquery-masonry-and-css3/">
                 <img className ="blog img-square" src="img/teamTwo.png" alt="" />
                 </a>
