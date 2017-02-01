@@ -24,7 +24,9 @@ class Pick extends React.Component{
             </div>);
     }
 
-    onGamePick(){}
+    onGamePick(){
+        this.setState({page: "TEAM"})
+    }
 }
 
 export default Pick;    
