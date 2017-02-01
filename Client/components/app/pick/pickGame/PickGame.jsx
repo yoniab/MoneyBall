@@ -7,8 +7,8 @@ class PickGame extends React.Component{
         super(props);
 
         this.state = {
-            shownGames: [{id:"hi", index: 1},{id: "gi", index:2},{id: "bi", index: 3}]
-        }
+            shownGames: [this.props.games[0],this.props.games[1],this.props.games[2]]
+        };
 
         this.onGameClick = this.onGameClick.bind(this);
         this.onRightClick = this.onRightClick.bind(this);
@@ -17,7 +17,7 @@ class PickGame extends React.Component{
 
     render(){
         return(
-            <table>
+            <table className="center">
             <tr>
                 <td><button className="btn btn-warning glyphicon glyphicon-chevron-left" type="button"
                 onClick={this.onLeftClick}></button></td>
@@ -25,7 +25,7 @@ class PickGame extends React.Component{
                 {
                     this.state.shownGames.map((game)=>{
                         return (
-                           <Game onGameClick={this.onGameClick} game={game}/>
+                           <Game onGameClick={this.onGameClick} game={game} key={game.id}/>
                         )
                     })
                 }
@@ -44,9 +44,9 @@ class PickGame extends React.Component{
             for(var game in this.props.games){
                 if(this.props.games[game].id == this.state.shownGames[gameIndex-1].id){
                     var newShownGames = [];
-                    newShownGames[1] = {id:this.props.games[game].id,index:2};
-                    newShownGames[0] = {id:this.props.games[((game - 1)<0)?(game - 1+ this.props.games.length):(game-1)].id, index:1};
-                    newShownGames[2] = {id:this.props.games[(game*1 + 1)%this.props.games.length].id, index: 3};
+                    newShownGames[1] = {id:this.props.games[game].id,index:2, teams:this.props.games[game].teams};
+                    newShownGames[0] = {id:this.props.games[((game - 1)<0)?(game - 1+ this.props.games.length):(game-1)].id, index:1,teams:this.props.games[((game - 1)<0)?(game - 1+ this.props.games.length):(game-1)].teams};
+                    newShownGames[2] = {id:this.props.games[(game*1 + 1)%this.props.games.length].id, index: 3,teams:this.props.games[(game*1 + 1)%this.props.games.length].teams};
 
                     this.setState({shownGames: newShownGames});
                 }

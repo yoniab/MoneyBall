@@ -74,56 +74,7 @@ html {
 .hit-the-floor {
     text-align: center;
 }
-.chosen-game{
-    transform: scale(1.2);
-    transition: all .5s ease-in;
-}
 
-.chosen-game:hover {
-    -moz-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
-    -webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
-    box-shadow: 0 0 5px 5px rgba(255,150,1,1);
-    border-radius: 30%;
-    z-index: 1000;
-
-}
-
-.faded-game {
-    opacity: 0.5;
-    border-radius: 30%;
-  transform: scale(0.8);
-  transition: all .5s ease-in;
-}
-
-.precentage-label{
-    position: relative;
-    top: -75px;
-    left: 15px;
-    font-size: xx-large;
-}
-
-.game {
-    max-width: 40%;
-}
-
-.shirt {
-    max-width: 100%;
-}
-
-.faded-game:hover {
-    -moz-box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
-    -webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
-    box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
-}
-
-.player-name {
-    position: relative;
-    left: -23%;
-    top: 50%;
-}
-
-.player-list{
-    display: inline-block;
 img {
     display: inline-block;
 }
@@ -137,8 +88,18 @@ body{
 }
 
 .chosen-game{
-    transform: scale(1.2);
-    transition: all .5s ease-in;
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+    z-index: 10000;
+    width: 360px;
+}
+
+.game-container {
+    padding: 50px;
+}
+
+.center {
+    margin: 0 auto;
 }
 
 .chosen-game:hover {
@@ -153,8 +114,10 @@ body{
 .faded-game {
     opacity: 0.5;
     border-radius: 30%;
-  transform: scale(0.8);
-  transition: all .5s ease-in;
+    width: 200px;
+    z-index: 0;
+  /*transform: scale(1);
+  transition: all .5s ease-in-out;*/
 }
 
 .precentage-label{

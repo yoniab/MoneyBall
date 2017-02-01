@@ -10,11 +10,11 @@ class Game extends React.Component{
     }
     render(){
         return(
-            <td>
+            <td className="game-container">
                 <div className={(this.props.game.index==2)?"chosen-game":"faded-game"} 
                 onClick={this.onGameClick}>
                     {this.props.game.id}
-                <img className="img-circle game" src="http://i.imgur.com/GLPCzXT.png"/> vs <img className="img-circle game" src="https://usatftw.files.wordpress.com/2016/05/minnesota_timberwolves-svg.png?w=1000&h=748"/>
+                <img className="img-circle game" src={this.props.game.teams[1].url}/> vs <img className="img-circle game" src={this.props.game.teams[0].url}/>
                 </div>
             </td>
         );

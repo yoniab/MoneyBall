@@ -15,6 +15,7 @@ class App extends React.Component {
 
         this.onTeamPicked = this.onTeamPicked.bind(this);
         this.onOutcomeBack = this.onOutcomeBack.bind(this);
+        this.calcOutCome = this.calcOutCome.bind(this);
     }
 
     render(){
@@ -23,18 +24,22 @@ class App extends React.Component {
             {
                 (this.state.outcome)?
                 <Outcome outcome={this.state.outcome} onOutcomeBack={this.onOutcomeBack}/>:
-                <Pick onTeamPicked={this.onTeamPicked} game={this.state.currGame}/>
+                <Pick onTeamPick={this.onTeamPicked} game={this.state.currGame}/>
             }
             </div>
         );
     }
 
-    onTeamPicked(outcome){
-        this.setState({outcome: outcome});
+    onTeamPicked(team){
+        this.calcOutCome(team);
     }
 
     onOutcomeBack(){
         this.setState({outcome: null, currGame: this.state.outcome.game});
+    }
+
+    calcOutCome(team){
+        this.setState({outcome: team});
     }
 }
 
