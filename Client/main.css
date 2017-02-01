@@ -10,3 +10,21 @@ img {
 body{
     text-align: center;
 }
+
+.chosen-game:hover {
+-moz-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
+-webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
+box-shadow: 0 0 5px 5px rgba(255,150,1,1);
+border-radius: 30%;
+}
+
+.faded-game {
+    opacity: 0.5;
+border-radius: 30%;
+}
+
+.faded-game:hover {
+        -moz-box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
+-webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
+box-shadow: 0 0 5px 5px rgba(255,150,1,0.5);
+}
