@@ -75,6 +75,7 @@ html {
     text-align: center;
 }
 
+<<<<<<< HEAD
 .chosen-game:hover {
     -moz-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
     -webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
@@ -125,12 +126,27 @@ display: inline-block;
 }
 
 .player-list{
+=======
+img {
+>>>>>>> 622d412b3423828d2f3672af54eed12ebeff619b
     display: inline-block;
 }
 
 img {
     display: inline-block;
 }
+.chosen-game{
+    transform: scale(1.5);
+    transition: all .5s ease-in-out;
+    z-index: 10000;
+    width: 360px;
+}
+
+.game-container {
+    padding: 50px;
+}
+
+
 .chosen-game{
     transform: scale(1.5);
     transition: all .5s ease-in-out;
