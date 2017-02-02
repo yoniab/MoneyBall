@@ -16,13 +16,13 @@ class PickTeam extends React.Component{
 <div id="menu">
     <div className="fader" onClick={this.onTeamClick}>
         <a>
-            <img className ="blog img-square" src="img/teamOne.png" alt="" />
+            <img className ="blog img-square" src={this.props.game.teams[0].url} alt="" />
             </a>
         </div>
         
         <div className="fader" onClick={this.onTeamClick}>
             <a >
-                <img className ="blog img-square" src="img/teamTwo.png" alt="" />
+                <img className ="blog img-square" src={this.props.game.teams[1].url} alt="" />
                 </a>
             </div>
                     
