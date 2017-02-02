@@ -9,7 +9,16 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            outcome: null,
+            outcome: {players:[{name: "feui", precentage: 12},
+             {name: "sssa", precentage: 20},
+              {name: "fe", precentage: 3}, 
+              {name: "s", precentage: 40}, 
+              {name: "sss", precentage: 90}],
+            team: {
+                name:"",
+                logo:""
+            }},
+
             currGame: null
         }
 
@@ -21,9 +30,9 @@ class App extends React.Component {
         return (
             <div>
             {
-                (this.state.outcome)?
-                <Outcome outcome={this.state.outcome} onOutcomeBack={this.onOutcomeBack}/>:
-                <Pick onTeamPicked={this.onTeamPicked} game={this.state.currGame}/>
+                // (this.state.outcome)?
+                <Outcome outcome={this.state.outcome} onOutcomeBack={this.onOutcomeBack}/>
+                // <Pick onTeamPicked={this.onTeamPicked} game={this.state.currGame}/>
             }
             </div>
         );
