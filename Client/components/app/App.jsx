@@ -39,7 +39,15 @@ class App extends React.Component {
     }
 
     calcOutCome(team){
-        this.setState({outcome: team});
+        $.get(
+            "somepage.php",
+            {team: team.name},
+            function(data) {
+                alert('page content: ' + data);
+                this.setState({outcome: team});
+            }
+        );
+        
     }
 }
 
