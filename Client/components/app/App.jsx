@@ -39,14 +39,23 @@ class App extends React.Component {
     }
 
     calcOutCome(team){
+        var info;
         $.get(
-            "",
-            {team: team.name},
+            "http://moneyballwebapi.azurewebsites.net/api/mb/"+team,
             function(data) {
-                alert('page content: ' + data);
-                 this.setState({outcome: team});
-            }
+                var data = JSON.parse(data);
+                var team = [];
+                team[0] = data.homeplayer1name;
+                team[1] = data.homeplayer2name;
+                team[2] = data.homeplayer3name;
+                team[3] = data.homeplayer4name;
+                team[4] = data.homeplayer5name;
+                info = {players:team};
+                this.setState({outcome: info});
+            }.bind(this)
         );
+
+        
         
     }
 }

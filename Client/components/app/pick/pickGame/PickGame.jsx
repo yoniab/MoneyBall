@@ -20,7 +20,7 @@ class PickGame extends React.Component{
             <table className="center">
             <tr>
                 <td><button className="btn btn-warning glyphicon glyphicon-chevron-left" type="button"
-                onClick={this.onLeftClick}></button></td>
+                onClick={this.onRightClick}></button></td>
                 <div className="game-list">
                 {
                     this.state.shownGames.map((game)=>{
@@ -31,7 +31,7 @@ class PickGame extends React.Component{
                 }
                 </div>
                 <td><button className="btn btn-warning glyphicon glyphicon-chevron-right" type="button"
-                onClick={this.onRightClick}></button></td>
+                onClick={this.onLeftClick}></button></td>
             </tr>
             </table>
         );

@@ -13,7 +13,6 @@ class Game extends React.Component{
             <td className="game-container">
                 <div className={(this.props.game.index==2)?"chosen-game":"faded-game"} 
                 onClick={this.onGameClick}>
-                    {this.props.game.id}
                 <img className="img-circle game" src={this.props.game.teams[1].url}/> vs <img className="img-circle game" src={this.props.game.teams[0].url}/>
                 </div>
             </td>

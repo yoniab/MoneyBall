@@ -14,13 +14,13 @@ class PickTeam extends React.Component{
             <div id="Teams">
             <div className="coolText"><h1>𝐏𝐈𝐂𝐊 𝐘𝐎𝐔𝐑 𝐓𝐄𝐀𝐌</h1></div>
 <div id="menu">
-    <div className="fader" onClick={this.onTeamClick}>
+    <div className="fader" onClick={this.onTeamClick.bind(this,this.props.game.teams[0].team)}>
         <a>
             <img className ="blog img-square" src={this.props.game.teams[0].url} alt="" />
             </a>
         </div>
         
-        <div className="fader" onClick={this.onTeamClick}>
+        <div className="fader" onClick={this.onTeamClick.bind(this,this.props.game.teams[1].team)}>
             <a >
                 <img className ="blog img-square" src={this.props.game.teams[1].url} alt="" />
                 </a>
@@ -30,14 +30,9 @@ class PickTeam extends React.Component{
         );
     }
 
-    onTeamClick(){
+    onTeamClick(team){
         this.props.onTeamClick({
-            team: {name:"team", logo:""},
-            players: [{name: "player", precentage: 20},
-            {name: "player", precentage: 20},
-            {name: "player", precentage: 20},
-            {name: "player", precentage: 20},
-            {name: "player", precentage: 20}]
+            team: team
         });
     }
 }
