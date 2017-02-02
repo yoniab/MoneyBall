@@ -3,11 +3,11 @@ import React from 'react'
 class Player extends React.Component{
     render(){
         return(
-            <td>
-                <img className="shirt" src="./../../../images/basketballShirt.gif"/>
+            <div className="player-name">
+                <img className="shirt" src="./../../../img/Untitled.png"/>
                 <label className="precentage-label">{this.props.player.precentage+"%"}</label>
-                <label className="player-name">{this.props.player.name}</label>
-            </td>
+                <label className="player-name nametag">{this.props.player.name}</label>
+            </div>
         );
     }
 }
