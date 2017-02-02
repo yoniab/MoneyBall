@@ -75,7 +75,6 @@ html {
     text-align: center;
 }
 
-<<<<<<< HEAD
 .chosen-game:hover {
     -moz-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
     -webkit-box-shadow: 0 0 5px 5px rgba(255,150,1,1);
@@ -126,9 +125,7 @@ display: inline-block;
 }
 
 .player-list{
-=======
-img {
->>>>>>> 622d412b3423828d2f3672af54eed12ebeff619b
+
     display: inline-block;
 }
 
@@ -184,6 +181,7 @@ img {
     position: relative;
     left: -40px;
     font-size: xx-large;
+
 }
 
 
